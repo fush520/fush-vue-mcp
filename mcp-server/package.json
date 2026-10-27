@@ -1,0 +1,46 @@
+{
+  "name": "fush-vue-mcp",
+  "version": "4.9.44",
+  "description": "Fush Vue MCP Server —— Vue 逆向 / 反调试 / Hook / 越权扫描的 MCP 集成（91 个工具）",
+  "private": true,
+  "main": "dist/index.bundle.cjs",
+  "type": "module",
+  "scripts": {
+    "build": "tsc && esbuild dist/index.js --bundle --platform=node --format=cjs --outfile=dist/index.bundle.cjs --external:bufferutil --external:utf-8-validate",
+    "prepare": "npm run build",
+    "start": "node dist/index.bundle.cjs",
+    "dev": "tsx src/index.ts",
+    "start:http": "node dist/index.bundle.cjs --http"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "mcp",
+    "browser",
+    "debugging",
+    "antidebug"
+  ],
+  "author": "Fusheng <3079047615@qq.com> (https://github.com/fush520)",
+  "license": "SEE LICENSE IN ../LICENSE.md",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "ws": "^8.22.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/ws": "^8.5.10",
+    "esbuild": "^0.28.2",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fush520/fush-vue-mcp.git"
+  },
+  "homepage": "https://github.com/fush520/fush-vue-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/fush520/fush-vue-mcp/issues"
+  }
+}
