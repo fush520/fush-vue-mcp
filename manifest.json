@@ -1,0 +1,54 @@
+{
+  "name": "Fush Vue MCP",
+  "version": "4.9.44",
+  "description": "Fush Vue MCP —— Vue 逆向 / 反调试 / Hook / 越权扫描 + MCP 集成（91 个工具）",
+  "manifest_version": 3,
+  "minimum_chrome_version": "116",
+  "permissions": [
+    "storage",
+    "scripting",
+    "activeTab",
+    "tabs",
+    "cookies",
+    "alarms",
+    "debugger",
+    "webRequest",
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess",
+    "declarativeNetRequestFeedback",
+    "nativeMessaging"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAksUyR9znY46zNSouJIWjjzWcHJxJJ338BYB1bhJoByDjdUup7qTKZvehWquvZy2nhkkv5JVQY6BZt8RlWy1QiawSNh3Q5GohUgaTwF7YQrtJGURlMr3LRvq5mhqIvPTECFrrAD+HOH0+DeYamI+Kezb8sBrNYSl0rnTUIGgqLUVL+awJ05qzKGUrtp07W6DChOQdOotxxwBYx+emu1bTSSwILGgOhUCZfkCh3eiuOD4y613i36rzFbsljZHI0hFd8lXZ89cfbQW/ONuVLqwBgHmQ6W8F+8KVy+Xa6ZYdbhoS5krctKFtWhA2tziIlFr7uEiEFViHHeUVcFeu2SihzwIDAQAB"
+}

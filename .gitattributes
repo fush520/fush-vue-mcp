@@ -1,0 +1,16 @@
+# 行尾一律交由仓库原样保存，禁止任何自动转换。
+#
+# 原因：本项目仅 Windows 使用，且**行尾本就混用**——mcp-client.js 是 CRLF（7771 处），
+# README.md / manifest.json / mcp-server/src/*.ts 是 LF。若让 git 做 text 转换，
+# 检出时会把整批文件改写行尾，产生"全文件 diff"淹没真实改动；
+# 对含中文的源文件更是一次不必要的字节改写。
+#
+# `-text` = 不做任何 EOL 规范化，git 按字节存取。
+* -text
+
+# 明确标注为二进制，避免 diff/merge 尝试文本处理
+*.png binary
+*.jpg binary
+*.ico binary
+*.woff  binary
+*.woff2 binary

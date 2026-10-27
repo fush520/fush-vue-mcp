@@ -1,0 +1,14 @@
+# 依赖与构建产物
+node_modules/
+mcp-server/dist/
+
+# 本地临时
+temp/
+release/
+
+# 本机生成的 native messaging 配置（含绝对路径）
+native-messaging-host.json
+
+# 系统
+.DS_Store
+Thumbs.db
