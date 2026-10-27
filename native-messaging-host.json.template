@@ -1,0 +1,9 @@
+{
+  "name": "com.adb.http_launcher",
+  "description": "Fush MCP - HTTP 服务按需启动器（打开插件 MCP 开关时自动拉起服务）",
+  "path": "__ADB_NATIVE_HOST_PATH__",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://gehffcnnfpebmbemfnkoflchkobghjeh/"
+  ]
+}
